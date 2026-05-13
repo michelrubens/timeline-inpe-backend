@@ -29,6 +29,10 @@ mongoose
 const imagemSchema = new mongoose.Schema({
   url: String,
   legenda: String,
+  fonte: {
+    texto: String, // ex: "NASA"
+    link: String, // ex: "https://www.nasa.gov"
+  },
 });
 
 const contextoSchema = new mongoose.Schema({
