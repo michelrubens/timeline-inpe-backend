@@ -18,7 +18,7 @@ const PORT = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
-const pastaImagens = path.join(__dirname, "..", "public", "imagens");
+const pastaImagens = path.resolve(process.env.IMAGES_PATH);
 app.use("/imagens", express.static(pastaImagens));
 
 // 1. Configura o Mongoose (Conexão com o MongoDB)
